@@ -1,0 +1,38 @@
+<br>
+<ul class="nav nav-tabs justify-content-end">
+  <li class="nav-item">
+    <a class="nav-link active"  (click)="AfficheTous()">Tous</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" (click)="AfficheVOSTFR()">VOSFR</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" (click)="AfficheVO()">VO</a>
+  </li>
+</ul>
+<br>
+<ul class="list-group" *ngIf="animes">
+    <app-anime *ngFor="let anime of animes; let i = index"
+
+    [title]="anime.title" 
+    [Autor]="anime.Autor"
+    [studio]="anime.studio"
+    [pictureLink]="anime.pictureLink"
+    [onVF]="anime.onVF"
+    [Nb_episode]="anime.Nb_episode"
+    [sortie]="anime.sortie"
+    [id]="anime.id"
+
+    [display]="anime.display"
+    [Finish]="anime.Finish"
+    [NB_Saison]="anime.NB_Saison"
+    [Nb_stars]="anime.Nb_stars"
+    [genre]="anime.genre"
+    [Resum]="anime.Resum"
+    [Statut]="anime.Statut"
+    >
+
+    
+  </app-anime>
+  </ul>
+  

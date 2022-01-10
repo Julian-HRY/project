@@ -1,0 +1,37 @@
+body{
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(61, 61, 255);
+    background-image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_igI8xWIIF-t4cbmoPfK_Heuv46UM6GdVTA&usqp=CAU';
+}
+
+img{
+    align-items: center;
+    height: 600px;
+}
+
+img #font{
+    position: absolute;
+    height:100%;
+    width: 100%;
+}
+
+H3{
+    color: rgb(224, 224, 224);
+    font-weight: bold;
+}
+p{
+    color: rgb(224, 224, 224);
+    font-size: 2em;
+    font-weight: 500;
+}
+
+.dec{
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}
+
+.naruto{
+    color: rgb(0, 0, 0);
+}

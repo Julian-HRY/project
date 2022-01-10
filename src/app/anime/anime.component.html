@@ -1,0 +1,85 @@
+<div *ngIf="display == true">
+  <li class="col-12" [ngClass]=" { 'list-group-item': true,
+  'list-group-item-info': onVF == true,
+  'list-group-item-warning': onVF == false }">
+
+    <div class="row">
+      <div class="row">
+        <div class="col-2">
+          <div class="onVF" *ngIf="onVF == false">
+            <img id='imgAnime' src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Flag_of_Japan.svg/langfr-225px-Flag_of_Japan.svg.png">
+          </div>
+          <div class="onVF" *ngIf="onVF == true">
+            <img  id='imgAnime' src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Flag_of_France_%281794%E2%80%931815%2C_1830%E2%80%931958%29.svg/langfr-225px-Flag_of_France_%281794%E2%80%931815%2C_1830%E2%80%931958%29.svg.png">
+          </div>
+          
+        </div>
+
+        <!-- <div class=" col-2">
+          <i [ngClass]="icon()" (click)="ChangeHeart()"></i>
+        </div> -->
+        
+        <div class="col-8">
+          <div class="col-8">
+            <div class="row">
+              <div class="col-12 col-sm-6">
+                <h3 [ngStyle]="{color: changeColor()}" >Animé : {{ title }}</h3>
+              </div>
+              <div *ngFor="let nb of numbers" style="width: 10%;">
+                <div *ngIf="nb <= Nb_stars">
+                  <i class="fas fa-star fa-2x row" ></i>
+                </div>
+              </div>
+              <div class="row">
+                <img class="affiche" id='imgtitre' [src]="pictureLink">
+              </div>                    
+                  
+                
+              
+            </div>
+          
+            
+              <div class="col-12 col-sm-6"> 
+                Date: {{ sortie }}
+                Durée : {{ Nb_episode }} épisodes
+                
+              </div>
+              <div class="col-12 col-sm-6">
+                Saison : {{ NB_Saison }}
+                Statut: {{ Statut }}
+              
+              </div>
+          </div>
+            <div class="row">
+              <div class="col-12 col-sm-6">
+                  Autor: {{Autor}} <br>
+                  studio: {{studio}} 
+              </div>
+              <div class="col-12 col-sm-6">
+                  genre : {{genre}} <br>
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-12">
+                Résumé: <br>
+                <div class="text-justify">
+                  {{Resum}}
+                </div>
+              </div>
+            </div>
+            <button class="btn btn-outline-success" (click)="onWatchFilm()">Regarder</button>
+            <br>
+          </div>
+
+
+          <div class="col-2">
+            <a [routerLink]="['/modif', id]" class="btn btn-warning">Modifier</a>
+            <button class="btn btn-danger" (click)="suppr()">Supprimer</button>
+          </div>
+      </div>
+
+      
+    </div>
+  </li>
+</div>

@@ -1,0 +1,51 @@
+<body [ngStyle]="{
+    'background-image': 'url(' + fond + ')',
+    'position' : 'absolute',
+    'width' : '100%',
+    'height' : 'auto',
+    'left' : '0'
+}">
+    <div>
+        <h1 [ngStyle]="{'text-align': 'center','color':'white'}"><b>Bienvenue dans l'univers des animés</b></h1>
+    </div>
+    <br>
+    <div class="col-8" id="content" [ngStyle]="{
+        'margin': '0 auto',
+        'box-shadow' : '0px 0px 10px black',
+        'height' : '70%',
+        'margin-bottom' : '1%'
+    }">
+        <ngb-carousel>
+            <ng-template ngbSlide>
+                <div class="picsum-img-wrapper">
+                    <img [ngStyle]="{'width': '100%'}" src="https://blogsenclasse.fr/19-objat-college-freyssinet-journal/wp-content/uploads/sites/53/2020/11/naruto-shippuden-top-des-meilleurs-episodes-5.jpg" alt="Random first slide">
+                </div>
+                <div class="carousel-caption">
+                <h3 class="naruto">Naruto</h3>
+                <p class="naruto">Redécouvrez ce grand classique des animés !</p>
+                </div>
+            </ng-template>
+            <ng-template ngbSlide>
+                <div class="picsum-img-wrapper">
+                <img [ngStyle]="{'width': '100%'}" src="https://furansujapon.com/wp-content/uploads/2020/09/une-black-clover.jpg"  alt="Random second slide">
+                </div>
+                <div class="carousel-caption">
+                <h3>Black Clover</h3>
+                <p>Suivez les aventures d'un jeune héro très sous-estimé</p>
+                </div>
+            </ng-template>
+            <ng-template ngbSlide>
+                <div class="picsum-img-wrapper">
+                <img [ngStyle]="{'width': '100%'}" src="https://www.miraigamers.com/wp-content/uploads/2020/08/Haikyuu-To-the-Top-la-partie-obtient-une-nouvelle-bande-annonce.jpg" alt="Random third slide">
+                </div>
+                <div class="carousel-caption" >
+                <h3>Haikyuu</h3>
+                <p>Ou bien vous préférez le sport, cet anime est parfait pour vous !</p>
+                </div>
+            </ng-template>
+        </ngb-carousel>
+    </div>
+    <div>
+        <p class="dec">Découvrez de nombreux animes</p>
+    </div>
+</body>
