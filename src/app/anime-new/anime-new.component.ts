@@ -29,8 +29,6 @@ export class AnimeNewComponent implements OnInit {
     let InputFields = document.getElementsByTagName('input');
     let countInput = 0;
 
-    console.log(InputFields);
-
     for (let i = 0; i < InputFields.length; i++) {
       if (InputFields[i].value != '' && InputFields[i].type == 'text') {
         countInput++;
@@ -38,7 +36,6 @@ export class AnimeNewComponent implements OnInit {
       }else if (InputFields[i].value == '' && InputFields[i].type == 'text') {
         InputFields[i].className = 'form-control is-invalid'
       }
-      console.log(InputFields[i].value);
     }
 
   //verification
@@ -47,7 +44,6 @@ export class AnimeNewComponent implements OnInit {
       if (this.anime.Finish == true) {
         
         this.anime.Statut = 'Terminé';
-        console.log(this.anime.Statut)
       }
       else{
         this.anime.Statut = 'En cours'

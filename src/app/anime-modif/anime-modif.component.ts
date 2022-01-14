@@ -21,7 +21,6 @@ export class AnimeModifComponent implements OnInit {
   ngOnInit(): void {
     const id = this.route.snapshot.params['id'];
     this.Animes.get(id).subscribe((value: any) => {
-      console.log(value)
       this.anime = value;
     });
   }
@@ -30,7 +29,6 @@ export class AnimeModifComponent implements OnInit {
     let InputFields = document.getElementsByTagName('input');
     let countInput = 0;
 
-    console.log(InputFields);
 
     for (let i = 0; i < InputFields.length; i++) {
       if (InputFields[i].value != '' && InputFields[i].type == 'text') {
@@ -39,19 +37,14 @@ export class AnimeModifComponent implements OnInit {
       }else if (InputFields[i].value == '' && InputFields[i].type == 'text') {
         InputFields[i].className = 'form-control is-invalid'
       }
-      console.log(InputFields[i].value);
     }
 
 
     if (countInput == InputFields.length-4) {
 
-      
-      console.log(this.anime)
-
       if (this.anime.Finish == true) {
         
         this.anime.Statut = 'Terminé';
-        console.log(this.anime.Statut)
       }
       else{
         this.anime.Statut = 'En cours'
