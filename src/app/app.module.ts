@@ -15,8 +15,6 @@ import { AnimeHomeComponent } from './anime-home/anime-home.component';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from 'src/environments/environment';
 import {AngularFireStorageModule } from '@angular/fire/storage';
-import { FavoriComponent } from './favori/favori.component';
-import { FavoriListComponent } from './favori-list/favori-list.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
@@ -28,8 +26,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     AnimeModifComponent,
     AnimeNewComponent,
     AnimeHomeComponent,
-    FavoriComponent,
-    FavoriListComponent
   ],
   imports: [
     BrowserModule,

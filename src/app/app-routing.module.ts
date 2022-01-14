@@ -4,7 +4,6 @@ import { AnimeHomeComponent } from './anime-home/anime-home.component';
 import { AnimeListComponent } from './anime-list/anime-list.component';
 import { AnimeModifComponent } from './anime-modif/anime-modif.component';
 import { AnimeNewComponent } from './anime-new/anime-new.component';
-import { FavoriComponent } from './favori/favori.component';
 
 const routes: Routes = [
   {
@@ -22,12 +21,7 @@ const routes: Routes = [
   {
     path: 'modif/:id',
     component: AnimeModifComponent
-  },
-  {
-    path: 'favori',
-    component: FavoriComponent
   }
-
   
   
 ];

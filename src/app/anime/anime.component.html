@@ -1,9 +1,10 @@
-<div *ngIf="display == true">
+<div *ngIf="display == true" style="margin-bottom: 10px;">
   <li class="col-12" [ngClass]=" { 'list-group-item': true,
   'list-group-item-info': onVF == true,
   'list-group-item-warning': onVF == false }">
 
-    <div class="row">
+  <br>
+    <div class="row" >
       <div class="row">
         <div class="col-2">
           <div class="onVF" *ngIf="onVF == false">
@@ -22,8 +23,9 @@
         <div class="col-8">
           <div class="col-8">
             <div class="row">
+              <br>
               <div class="col-12 col-sm-6">
-                <h3 [ngStyle]="{color: changeColor()}" >Animé : {{ title }}</h3>
+                <h3 [ngStyle]="{color: changeColor()}" ><b>Animé : </b>{{ title }}</h3>
               </div>
               <div *ngFor="let nb of numbers" style="width: 10%;">
                 <div *ngIf="nb <= Nb_stars">
@@ -32,43 +34,48 @@
               </div>
               <div class="row">
                 <img class="affiche" id='imgtitre' [src]="pictureLink">
-              </div>                    
-                  
-                
+              </div>
               
             </div>
           
-            
+            <br>
+              
+          </div>
+            <div class="row">
               <div class="col-12 col-sm-6"> 
-                Date: {{ sortie }}
-                Durée : {{ Nb_episode }} épisodes
+                <b>Durée : </b>{{ Nb_episode }} épisodes
                 
               </div>
               <div class="col-12 col-sm-6">
-                Saison : {{ NB_Saison }}
-                Statut: {{ Statut }}
+                <b>Statut: </b>{{ Statut }}
               
               </div>
-          </div>
-            <div class="row">
               <div class="col-12 col-sm-6">
-                  Autor: {{Autor}} <br>
-                  studio: {{studio}} 
+                <b> Saison : </b>{{ NB_Saison }}
+              
               </div>
               <div class="col-12 col-sm-6">
-                  genre : {{genre}} <br>
+                <b>Autor: </b>{{Autor}}
+              </div>
+              <div class="col-12 col-sm-6">
+                <b>Studio: </b>{{studio}} 
+            </div>
+              <div class="col-12 col-sm-6">
+                <b>Genre : </b>{{genre}} <br>
               </div>
             </div>
             <br>
-            <div class="row">
+
+
+            <div class="row" *ngIf="Resum != ''">
               <div class="col-12">
-                Résumé: <br>
+                <b>Résumé: </b>
+                <br>
                 <div class="text-justify">
                   {{Resum}}
                 </div>
               </div>
             </div>
-            <button class="btn btn-outline-success" (click)="onWatchFilm()">Regarder</button>
             <br>
           </div>
 
